@@ -22,10 +22,10 @@ public class Main{
         frame.getContentPane().setBackground(new Color(0x123456)); // set the background color of the frame
 
         //create a panel
-//        JPanel panel = new JPanel();
-//        panel.setPreferredSize(new Dimension(250, 250));
-//        panel.setBackground(Color.lightGray);
-//        panel.setLayout(new GridLayout(3, 3, 10, 10)); // set the layout of the panel
+        JPanel panel = new JPanel();
+        panel.setPreferredSize(new Dimension(250, 250));
+        panel.setBackground(Color.lightGray);
+        panel.setLayout(new GridLayout(3, 3, 10, 10)); // set the layout of the panel
 
         // create buttons
         JButton button1 = new JButton("1");
@@ -43,9 +43,15 @@ public class Main{
         JButton button13 = new JButton("13");
         JButton button14 = new JButton("14");
         JButton button15 = new JButton("15");
+        JButton button16 = new JButton("16");
+        JButton button17 = new JButton("17");
+
+        // add buttons to the panel
+        panel.add(button16);
+        panel.add(button17);
 
         //add panel to the frame
-//        frame.add(panel);
+        frame.add(panel);
 
         // add buttons to the frame
         frame.add(button1);
