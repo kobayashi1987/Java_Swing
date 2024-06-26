@@ -3,29 +3,10 @@ package LearnGUI;
 import javax.swing.*;
 import java.awt.*;
 
-//public class Main {
-//    public static void main(String[] args) {
-//        System.out.println("Hello World");
-//
-//        ImageIcon image = new ImageIcon("norway.png");
-//        JLabel label = new JLabel();
-//        label.setIcon(image);
-//        label.setText("Hi, I am a label");
-//        label.setVerticalAlignment(JLabel.TOP);
-//        label.setForeground(new Color(0x00FF00));
-//
-//        // study JButton
-//        MyFrame frame01 = new MyFrame();
-//        frame01.setTitle("Learn JButton");
-//        frame01.setSize(800, 600);
-//        frame01.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Ensure the application exits when the frame is closed
-//        frame01.setLayout(new FlowLayout()); // Set a layout manager
-//        frame01.add(label);
-//        frame01.setVisible(true); // Make sure the frame is visible
-//    }
-//}
 
-// study JButton
+// Study GridLayout
+// GridLayout is a layout manager that lays out a container's components in a rectangular grid.
+// The container is divided into equal-sized rectangles, and one component is placed in each rectangle.
 
 
 public class Main{
@@ -33,56 +14,57 @@ public class Main{
     public static void main(String[] args) {
         System.out.println("Hello World");
 
-        // create label
-//        ImageIcon image = new ImageIcon("norway.png");
-//        JLabel label = new JLabel();
-//        label.setIcon(image);
-//        label.setText("Hi, I am a label, gonna learn BorderLayout next.");
-//        label.setVerticalAlignment(JLabel.TOP);
-//        label.setForeground(new Color(0x00FF00));
-//        label.setBounds(0, 0, 800, 600);
-
-        // create frame
+        // create a frame
         JFrame frame = new JFrame();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Ensure the application exits when the frame is closed
-        frame.setSize(800, 600);
-        frame.setLayout(new FlowLayout(FlowLayout.CENTER, 3,3)); // Set a layout manager
-//        frame.add(label);
-        frame.setTitle("Learn JLabel");
-        frame.getContentPane().setBackground(new Color(0x123456));
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // exit out of application
+        frame.setSize(800, 600); // set the x-dimension and y-dimension of the frame
+        frame.setLayout(new GridLayout(3, 3, 10, 10)); // set the layout of the frame
+        frame.getContentPane().setBackground(new Color(0x123456)); // set the background color of the frame
 
-        // create a panel with FlowLayout manager
-        JPanel panel = new JPanel();
-        panel.setPreferredSize(new Dimension(600, 250));
-        panel.setBackground(Color.lightGray);
-        panel.setLayout(new FlowLayout());
+        //create a panel
+//        JPanel panel = new JPanel();
+//        panel.setPreferredSize(new Dimension(250, 250));
+//        panel.setBackground(Color.lightGray);
+//        panel.setLayout(new GridLayout(3, 3, 10, 10)); // set the layout of the panel
 
+        // create buttons
+        JButton button1 = new JButton("1");
+        JButton button2 = new JButton("2");
+        JButton button3 = new JButton("3");
+        JButton button4 = new JButton("4");
+        JButton button5 = new JButton("5");
+        JButton button6 = new JButton("6");
+        JButton button7 = new JButton("7");
+        JButton button8 = new JButton("8");
+        JButton button9 = new JButton("9");
+        JButton button10 = new JButton("10");
+        JButton button11 = new JButton("11");
+        JButton button12 = new JButton("12");
+        JButton button13 = new JButton("13");
+        JButton button14 = new JButton("14");
+        JButton button15 = new JButton("15");
 
-        //creat buttons
-        JButton button1 = new JButton();
-        JButton button2 = new JButton();
-        JButton button3 = new JButton();
-        JButton button4 = new JButton();
-        JButton button5 = new JButton();
-        JButton button6 = new JButton();
+        //add panel to the frame
+//        frame.add(panel);
 
-        button1.setText("Button 1");
-
-        // add the buttons into panel
-        panel.add(button1);
-        panel.add(button2);
-        panel.add(button3);
-        panel.add(button4);
-        panel.add(button5);
-        panel.add(button6);
-        panel.add(new JButton("Button 7"));
-
-        // add panel to frame
-        frame.add(panel);
+        // add buttons to the frame
+        frame.add(button1);
+        frame.add(button2);
+        frame.add(button3);
+        frame.add(button4);
+        frame.add(button5);
+        frame.add(button6);
+        frame.add(button7);
+        frame.add(button8);
+        frame.add(button9);
+        frame.add(button10);
+        frame.add(button11);
+        frame.add(button12);
+        frame.add(button13);
+        frame.add(button14);
+        frame.add(button15);
 
         // create visibility
         frame.setVisible(true); // Make sure the frame is visible
     }
 }
-
-//test github 20240622 1157 kuala kurau
