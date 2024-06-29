@@ -11,6 +11,9 @@ public class MyFrame extends JFrame implements ActionListener {
     JButton button;
     JLabel label;
     JTextField textField;
+    JCheckBox checkBox;
+    ImageIcon xIcon;
+    ImageIcon checkIcon;
 
     MyFrame(){
 
@@ -18,10 +21,22 @@ public class MyFrame extends JFrame implements ActionListener {
         ImageIcon icon = new ImageIcon("finland.png");
         ImageIcon icon1 = new ImageIcon("denmark.png");
 
+        // create an icon
+        xIcon = new ImageIcon("iceland.png");
+        checkIcon = new ImageIcon("germany.png");
+
+        // create a check box
+        checkBox = new JCheckBox();
+        checkBox.setText("I'm not a robot");
+        checkBox.setFocusable(false); // remove the focus of the check box
+        checkBox.setFont(new Font("Comic Sans", Font.BOLD, 25)); // set the font
+        checkBox.setIcon(xIcon);
+        checkBox.setSelectedIcon(checkIcon);
+
         // create a JTextField
         textField = new JTextField();
         textField.setPreferredSize(new Dimension(250, 40)); // set the size of text field
-        textField.setFont(new Font("Consolas", Font.PLAIN, 35)); // set the font
+        textField.setFont(new Font("Comic Sans", Font.PLAIN, 25)); // set the font
         textField.setForeground(new Color(0x00FF00)); // set the font color
         textField.setBackground(Color.black); // set the background color
         textField.setCaretColor(Color.white); // set the caret color
@@ -56,6 +71,7 @@ public class MyFrame extends JFrame implements ActionListener {
         this.setVisible(true);
         this.setTitle("Learn JButton");
         this.setLayout(new FlowLayout());
+        this.add(checkBox);
         this.add(button);   // add button to the frame
         this.add(label);    // add label to the frame
         this.add(textField); // add text field to the frame
@@ -71,11 +87,13 @@ public class MyFrame extends JFrame implements ActionListener {
         // when button is clicked, this will execute
         if(e.getSource() == button){
             System.out.println("Button clicked");
+            Boolean state = checkBox.isSelected();
+            System.out.println(state);
             String text = textField.getText();
             System.out.println(text);
             textField.setEditable(false);   // set the text field editable or not
             label.setVisible(true);
-            button.setEnabled(false); // disable the button
+//            button.setEnabled(false); // disable the button
         }
     }
 
