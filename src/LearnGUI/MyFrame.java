@@ -33,6 +33,14 @@ public class MyFrame extends JFrame implements ActionListener {
         checkBox.setIcon(xIcon);
         checkBox.setSelectedIcon(checkIcon);
 
+        // test another check box
+        JCheckBox checkBox1 = new JCheckBox();
+        checkBox1.setText("I'm a robot");
+        checkBox1.setFocusable(false); // remove the focus of the check box
+        checkBox1.setFont(new Font("Comic Sans", Font.BOLD, 25)); // set the font
+        checkBox1.setIcon(xIcon);
+        checkBox1.setSelectedIcon(checkIcon);
+
         // create a JTextField
         textField = new JTextField();
         textField.setPreferredSize(new Dimension(250, 40)); // set the size of text field
@@ -78,8 +86,6 @@ public class MyFrame extends JFrame implements ActionListener {
         this.pack(); // set the frame to the size of the components
         this.getContentPane().setBackground(new Color(0x123456)); // set the frame color
 
-
-
     }
 
     @Override
@@ -99,3 +105,4 @@ public class MyFrame extends JFrame implements ActionListener {
 
 
 }
+// to test github
